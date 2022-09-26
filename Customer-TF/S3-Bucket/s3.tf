@@ -3,6 +3,11 @@ variable "aws_region" {
     default = "us-west-2"
 }
 
+variable "bucket_name" {
+    type = string
+    default = "bucket-name"
+}
+
 resource "aws_s3_bucket" "bucket" {
     bucket = "my-bucket-test-1995"
     force_destroy = true  
