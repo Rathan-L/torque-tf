@@ -3,13 +3,13 @@ variable "aws_region" {
     default = "us-west-2"
 }
 
-variable "bucket_name" {
-    type = string
-    default = "bucket-name"
-}
+inputs:
+  bucket_name:
+    type: string
+    default: bucket-name
 
 resource "aws_s3_bucket" "bucket" {
-    bucket = "my-bucket-test-1995"
+    bucket = bucket_name
     force_destroy = true  
     acl = "public-read-write"
 
