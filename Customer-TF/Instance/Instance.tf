@@ -18,6 +18,9 @@ data "aws_ami" "ubuntu" {
 resource "aws_instance" "myapp" {
   ami           = data.aws_ami.ubuntu.id
   instance_type = "t3.micro"
+  enableDnsHostnames	= true
+  enableDnsResolution = true
+
 
   tags = {
     Name = var.name
