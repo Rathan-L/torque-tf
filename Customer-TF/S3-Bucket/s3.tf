@@ -11,7 +11,7 @@ variable "input_bucket_name" {
 resource "aws_s3_bucket" "bucket" {
     bucket = var.input_bucket_name
     force_destroy = true  
-    acl = "public-read-write"
+    acl = "private"
 
     tags = {
     Name        = "My bucket"
