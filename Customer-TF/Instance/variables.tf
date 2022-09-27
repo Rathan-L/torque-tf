@@ -6,11 +6,13 @@ variable "name" {
 variable "db_user" {
   type    = string
   sensitive = true
+  default = "dbuser"
 }
 
 variable "db_pass" {
   type    = string
   sensitive = true
+  default = "dbpass"
 }
 
 variable "s3_bucket" {
